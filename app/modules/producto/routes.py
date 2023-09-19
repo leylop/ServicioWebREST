@@ -3,6 +3,8 @@ import os
 from flask import Blueprint, jsonify, request
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
+import app.modules.usuario.services as usuario_services
+
 usuario_blueprint = Blueprint('usuario', __name__)
 
 CONNECTION_STRING = os.environ.get("CONNECTION_STRING")
@@ -22,4 +24,4 @@ def send_request():
         "mensaje": "Usuario actualizado con éxito",
         "data": data
     }
-    return jsonify(response_data)
+    return usuario_services.emulate_and_save_data(jsonify(response_data))
