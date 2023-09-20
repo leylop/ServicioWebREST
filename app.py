@@ -7,6 +7,3 @@ app = Flask(__name__)
 def trigger_send_request():
     producto_routes.send_request()
     return jsonify({"message": "send_request executed successfully!"})
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
