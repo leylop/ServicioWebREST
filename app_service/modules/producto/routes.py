@@ -3,7 +3,7 @@ import os
 from flask import Blueprint, jsonify, request
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
-import app.modules.usuario.services as usuario_services
+import app_service.modules.usuario.services as usuario_services
 
 usuario_blueprint = Blueprint('usuario', __name__)
 

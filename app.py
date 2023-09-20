@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-import app.modules.producto.routes as producto_routes
+import app_service.modules.producto.routes as producto_routes
 
 app = Flask(__name__)
 
